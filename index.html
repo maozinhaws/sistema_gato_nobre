@@ -8,6 +8,10 @@
     <style>
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .animate-enter { animation: fadeIn 0.6s ease-out forwards; }
+        
+        /* Estilo para esconder/mostrar instruções */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-slate-900 h-screen flex items-center justify-center p-4">
@@ -23,13 +27,31 @@
         <h1 class="text-3xl font-black text-white mb-2 tracking-tight">CAIXA RÁPIDO</h1>
         <p class="text-slate-400 text-sm font-medium mb-8">Gestão de Vendas & Controle de Caixa</p>
 
-        <!-- URL ATUALIZADA -->
-        <a href="https://script.google.com/macros/s/AKfycbyIafoAVfG2IxdG-0vrEL7LXomv-u0tGlEMcRRG2IaNBb5QpxijP7ixNo5eClAp8Sd5/exec" 
-           class="block w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/25 active:scale-95">
+        <!-- Botão de Acesso via AccountChooser -->
+        <a href="https://accounts.google.com/AccountChooser?continue=https%3A%2F%2Fscript.google.com%2Fmacros%2Fs%2FAKfycbyIafoAVfG2IxdG-0vrEL7LXomv-u0tGlEMcRRG2IaNBb5QpxijP7ixNo5eClAp8Sd5%2Fexec" 
+           class="block w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/25 active:scale-95 mb-6">
             ACESSAR SISTEMA
         </a>
 
-        <p class="mt-6 text-xs text-slate-500 font-bold uppercase tracking-wider">
+        <!-- Guia de Primeiro Acesso (Mitigação do Alerta do Google) -->
+        <details class="group">
+            <summary class="cursor-pointer text-xs text-slate-400 hover:text-white transition-colors flex items-center justify-center gap-1 font-bold uppercase tracking-wider">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                Instruções de Primeiro Acesso
+            </summary>
+            
+            <div class="mt-4 text-left bg-slate-800/50 p-4 rounded-xl border border-white/5 text-xs text-slate-300 space-y-2">
+                <p>O Google pode exibir uma tela de verificação. Siga os passos:</p>
+                <ol class="list-decimal pl-4 space-y-1 text-slate-400">
+                    <li>Selecione sua conta Google.</li>
+                    <li>Na tela "App não verificado", clique em <strong class="text-white">Avançado</strong>.</li>
+                    <li>Clique no link no final: <strong class="text-white">Acessar (não seguro)</strong>.</li>
+                    <li>Clique em <strong class="text-white">Permitir</strong> para criar seu banco de dados.</li>
+                </ol>
+            </div>
+        </details>
+
+        <p class="mt-6 text-[10px] text-slate-600 font-bold uppercase tracking-widest">
             Ambiente Seguro Google Cloud
         </p>
     </div>

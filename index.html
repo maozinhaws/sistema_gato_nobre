@@ -2,27 +2,37 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sistema Caixa Rápido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso | Caixa Rápido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Reset CSS para garantir tela cheia sem bordas */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            width: 100%; 
-            overflow: hidden; /* Remove barra de rolagem dupla */
-        }
-        iframe { 
-            width: 100%; 
-            height: 100%; 
-            border: none; 
-            display: block; /* Remove espaços fantasmas */
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-enter { animation: fadeIn 0.6s ease-out forwards; }
     </style>
 </head>
-<body>
-    <!-- SUBSTITUA A URL ABAIXO PELA SUA URL DO GOOGLE SCRIPT -->
-    <iframe src="https://script.google.com/macros/s/AKfycbyIafoAVfG2IxdG-0vrEL7LXomv-u0tGlEMcRRG2IaNBb5QpxijP7ixNo5eClAp8Sd5/exec" allow="clipboard-write"></iframe>
+<body class="bg-slate-900 h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-3xl max-w-md w-full text-center shadow-2xl animate-enter">
+        <div class="mb-6 flex justify-center">
+            <div class="bg-indigo-600 p-4 rounded-2xl shadow-lg shadow-indigo-500/50">
+                <!-- Ícone Zap -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-black text-white mb-2 tracking-tight">CAIXA RÁPIDO</h1>
+        <p class="text-slate-400 text-sm font-medium mb-8">Gestão de Vendas & Controle de Caixa</p>
+
+        <!-- URL ATUALIZADA -->
+        <a href="https://script.google.com/macros/s/AKfycbyIafoAVfG2IxdG-0vrEL7LXomv-u0tGlEMcRRG2IaNBb5QpxijP7ixNo5eClAp8Sd5/exec" 
+           class="block w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-indigo-500/25 active:scale-95">
+            ACESSAR SISTEMA
+        </a>
+
+        <p class="mt-6 text-xs text-slate-500 font-bold uppercase tracking-wider">
+            Ambiente Seguro Google Cloud
+        </p>
+    </div>
+
 </body>
 </html>
